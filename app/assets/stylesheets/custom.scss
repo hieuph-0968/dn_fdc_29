@@ -536,7 +536,7 @@ h1.archive-title {
 }
 .form-login {
   .inner {
-    padding: 230px 0;
+    padding: 80px 0;
     display: flex;
     justify-content: center;
     form {
@@ -628,4 +628,25 @@ h1.archive-title {
   height: auto;
   width:100%;
   height:700px;
+}
+
+.form-control{
+  border: 1px solid $gray;
+  width: 100%;
+  margin-bottom: 15px;
+  height: auto !important;
+}
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
 }

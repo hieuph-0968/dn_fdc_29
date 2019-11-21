@@ -19,3 +19,4 @@ production:
   database: testig_production
   username: testig
   password: <%= ENV['TESTIG_DATABASE_PASSWORD'] %>
+  database: Forum_gamer_development
