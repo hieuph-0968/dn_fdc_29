@@ -2,4 +2,23 @@ en:
   layouts:
     application:
       title: "ForumGamer"
-
+    header:
+      home: "Home"
+      activity: "Activity"
+      sign_in: "Login"
+      title: "Forum on game"
+      search: "Search"
+      sign_up: "Sign up"
+      alt: "Rails logo"
+    footer:
+      en: "English"
+      vi: "Vietnamese"
+      title: "Copyright © 2019.Phan Hoàng Hiếu"
+  static_pages:
+    home:
+      home_page: "Home"
+      h3_title: "Integrating WordPress with Your Website"
+      time: "25 Feb, 2013 in "
+      servers: "Server & Database"
+      post: "66 Posts"
+      topic: "Topic"

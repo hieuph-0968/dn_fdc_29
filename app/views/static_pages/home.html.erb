@@ -1,0 +1,21 @@
+<% provide :title, t(".home_page") %>
+<div class="page-container">
+  <div class="container">
+    <div class="row">
+      <div class="span8 page-content">
+        <div class="row ">
+          <section class="span12 articles-list">
+          <h2 class= "topic"><%= t(".topic") %></h2>
+          <ul class="articles">
+            <li class="article-entry standard">
+              <h3 class ="h3_title"><%= link_to t(".h3_title") %></h3>
+              <span class="article-meta"><%= link_to t(".time")%><%= link_to t(".servers") %></span>
+              <span class="count"><%= link_to t(".post") %></span>
+            </li>
+          </ul>
+        </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
