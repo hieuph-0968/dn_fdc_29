@@ -52,3 +52,8 @@ group :development, :test do
   gem "rubocop", "~> 0.74.0", require: false
   gem "rubocop-rails", "~> 2.3.2", require: false
 end
+gem "bootstrap-sass", "3.3.7"
+gem "figaro"
+gem "font-awesome-sass", "~> 5.11.2"
+gem "jquery-rails"
+gem "rails-i18n"
