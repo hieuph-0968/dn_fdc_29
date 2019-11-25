@@ -1,4 +1,11 @@
 en:
+  helpers:
+    placeholder:
+      user:
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
   layouts:
     header:
       home: "Home"
@@ -19,3 +26,14 @@ en:
       servers: "Server & Database"
       post: "66 Posts"
       topic: "Topic"
+  users:
+    new:
+      title: "Sign Up"
+      save: "Create my account"
+    create:
+      sucess: "Welcome to the Forum gamer!"
+
+  shared:
+    error_messages:
+      one: "The form contains %{count} error"
+      other: "The form contains %{count} errors"

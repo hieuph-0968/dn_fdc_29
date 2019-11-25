@@ -1,4 +1,11 @@
 vi:
+  helpers:
+    placeholder:
+      user:
+        name: "Tên"
+        email: "Email"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"
   layouts:
     header:
       home: "Trang Chủ"
@@ -19,4 +26,14 @@ vi:
       servers: "Máy chủ & cơ sở dữ liệu"
       post: "66 bài viết"
       topic: "Chủ Đề"
+  users:
+    new:
+      title: "Đăng Kí"
+      save: "Tạo tài khoản"
+    create:
+      sucess: "Chào mừng đến với diễn đàn game thủ !"
+  shared:
+    error_messages:
+      one: "Biểu mẫu có chứa %{count} lỗi"
+      other: "Biểu mẫu có chứa %{count} lỗi"
 
