@@ -8,19 +8,32 @@
       <nav class="main-nav">
         <div class="menu-top-menu-container">
           <ul id="menu-top-menu" class="clearfix">
-            <li class="current-menu-item"><%= link_to t(".home") %></li>
-            <li><%= link_to t(".activity") %></li>
-            <li><%= link_to t(".sign_up"),signup_path %></li>
-            <li><%= link_to t(".sign_in") %></li>
-            <li><%= form_tag(@users) do %>
-                <%= text_field_tag :term %>
-                <%= submit_tag t(".search") %>
+            <li> <%= form_tag do  %>
+                <%= search_field_tag :search, nil, {placeholder:"Search",class: "search"} %>
               <% end %>
             </li>
+            <li class="current-menu-item"><%= link_to t(".home") %></li>
+            <% if logged_in? %>
+              <li><%= link_to t(".activity") %></li>
+              <li class="dropdown">
+                <%= link_to t(".link_dropdown_html"), "#", "data-toggle" => "dropdown" %>
+                <ul class="dropdown-menu">
+                  <li><%= link_to t(".profile"), current_user %></li>
+                  <li><%= link_to t(".setting"), edit_user_path(current_user) %></li>
+                  <li class="divider"></li>
+                  <li>
+                    <%= link_to t(".logout"), logout_path, method: :delete %>
+                  </li>
+                </ul>
+              </li>
+            <% else %>
+              <li class = "nav-item"><%= link_to t(".sign_in"), login_path, class: "nav-link" %></li>
+             <li class = "nav-item"><%= link_to t(".sign_up"), signup_path, class: "nav-link" %></li>
+            <% end %>
           </ul>
         </div>
       </nav>
     </div>
    </header>
 </div>
-<%= link_to image_tag("Thumb.jpg",size: "100%*500",alt: "Rails logo",:class => "header-wrapper") %>
+

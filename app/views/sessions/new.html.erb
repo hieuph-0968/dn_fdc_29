@@ -1,0 +1,18 @@
+<% provide :title, "Login" %>
+<div class="page-container">
+  <div class="container">
+    <div class="row">
+      <div class="span12 main-listing form-login">
+        <div class="inner">
+          <%= form_for(:session, url: login_path) do |f| %>
+            <h1>Login</h1>
+            <%= f.email_field :email, placeholder: t("helpers.placeholder.user.email"), class: "form-control" %>
+            <%= f.password_field :password, placeholder: t("helpers.placeholder.user.password"),class: "form-control" %>
+            <%= f.submit "Log in", class: "btn btn-primary" %>
+            <p><%= t(".new_user") %><%= link_to t(".sign"), signup_path %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

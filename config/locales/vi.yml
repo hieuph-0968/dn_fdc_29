@@ -14,6 +14,12 @@ vi:
       title: "Diễn đàn về trò chơi"
       search: "Tìm kiếm"
       sign_up: "Đăng Kí"
+      link_dropdown_html: "Tài Khoản"
+      profile: "Thông tin"
+      setting: "Đổi mật khẩu"
+      logout: "Đăng xuất"
+
+
     footer:
       en: "Tiếng Anh"
       vi: "Tiếng Việt"
@@ -36,4 +42,10 @@ vi:
     error_messages:
       one: "Biểu mẫu có chứa %{count} lỗi"
       other: "Biểu mẫu có chứa %{count} lỗi"
+  sessions:
+    create:
+      danger: "Email hoặc mật khẩu sai"
+    new:
+      new_user:  "Người dùng mới?"
+      sign: "Đăng ký ngay!"
 
