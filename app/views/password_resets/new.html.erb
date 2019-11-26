@@ -1,0 +1,16 @@
+<% provide :title,  t(".title") %>
+<div class="page-container">
+  <div class="container">
+    <div class="row">
+      <div class="span12 main-listing form-login">
+        <div class="inner">
+          <%= form_for(:password_reset, url: password_resets_path) do |f| %>
+            <h1 class="h1_title"><%= t(".title") %></h1>
+            <%= f.email_field :email, placeholder: t("helpers.placeholder.user.email"), class: "form-control" %>
+            <%= f.submit "Submit",class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
