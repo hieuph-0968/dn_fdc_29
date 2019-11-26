@@ -630,7 +630,7 @@ h1.archive-title {
   border: 1px solid $gray;
   width: 100%;
   padding: 5px 10px;
-  border-radius: 15px;
+  border-radius: 7px;
 }
 #error_explanation {
   color: red;
@@ -647,3 +647,16 @@ h1.archive-title {
   }
 }
 
+.h1_title{
+  padding-bottom:50px;
+}
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}

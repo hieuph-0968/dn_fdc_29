@@ -1,11 +1,11 @@
-<% provide :title, t(".title") %>
+<% provide(:title, "Edit user") %>
 <div class="page-container">
   <div class="container">
     <div class="row">
       <div class="span12 main-listing form-login">
         <div class="inner">
-          <%= form_for(@user, url: signup_path) do |f| %>
-            <h1 class="h1_title"><%= t(".title") %></h1>
+          <%= form_for(@user) do |f| %>
+            <h1 class="h1_title"><%= t(".update") %></h1>
             <%= render "shared/error_messages" %>
             <%= f.text_field :name, placeholder: t("helpers.placeholder.user.name"),class: "form-control" %>
             <%= f.email_field :email, placeholder: t("helpers.placeholder.user.email"),class: "form-control" %>
@@ -18,3 +18,5 @@
     </div>
   </div>
 </div>
+
+

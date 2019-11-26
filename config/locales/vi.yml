@@ -18,7 +18,7 @@ vi:
       profile: "Thông tin"
       setting: "Đổi mật khẩu"
       logout: "Đăng xuất"
-
+      user: "Tất cả người dùng"
 
     footer:
       en: "Tiếng Anh"
@@ -38,6 +38,12 @@ vi:
       save: "Tạo tài khoản"
     create:
       sucess: "Chào mừng đến với diễn đàn game thủ !"
+    edit:
+      update: "Cập nhật hồ sơ của bạn"
+      save: "Lưu thay đổi"
+    index:
+      profile: "Thông tin đã cập nhật"
+
   shared:
     error_messages:
       one: "Biểu mẫu có chứa %{count} lỗi"
@@ -48,4 +54,4 @@ vi:
     new:
       new_user:  "Người dùng mới?"
       sign: "Đăng ký ngay!"
-
+      login: "Đăng nhập"

@@ -18,6 +18,7 @@ en:
       profile: "Profile"
       setting: "Setting"
       logout: "Logout"
+      user: "All Users"
 
     footer:
       en: "English"
@@ -37,6 +38,9 @@ en:
       save: "Create my account"
     create:
       sucess: "Welcome to the Forum gamer!"
+    edit:
+      update: "Update your profile"
+      save: "Save changes"
 
   shared:
     error_messages:
@@ -48,3 +52,4 @@ en:
     new:
       new_user: "New user?"
       sign: "Sign up now!"
+      login: "Login"
