@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_11_26_140347) do
 
-  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.text "content"
     t.integer "type"
     t.bigint "post_id", null: false
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2019_11_26_140347) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.integer "type"
     t.bigint "post_id", null: false
     t.bigint "user_id", null: false
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2019_11_26_140347) do
     t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
-  create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.text "content"
     t.integer "messager_id"
     t.integer "messaged_id"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2019_11_26_140347) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.text "content"
     t.string "picture"
     t.bigint "topic_id", null: false
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2019_11_26_140347) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  create_table "suggests", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "suggests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.string "picture"
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2019_11_26_140347) do
     t.index ["topic_id"], name: "index_suggests_on_topic_id"
   end
 
-  create_table "topics", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "topics", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.string "parent_id"
@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 2019_11_26_140347) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "user_histories", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "user_histories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.string "description"
     t.string "type"
     t.integer "type_id"
@@ -81,10 +81,10 @@ ActiveRecord::Schema.define(version: 2019_11_26_140347) do
     t.index ["user_id"], name: "index_user_histories_on_user_id"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.integer "role"
+    t.integer "role", default: 1
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"

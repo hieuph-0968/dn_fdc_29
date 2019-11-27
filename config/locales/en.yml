@@ -33,6 +33,7 @@ en:
       post: "66 Posts"
       topic: "Topic"
   users:
+    logged: "Please login first"
     new:
       title: "Sign Up"
       save: "Create my account"
@@ -43,6 +44,7 @@ en:
       save: "Save changes"
     index:
       profile: "Profile updated"
+      all: "All Users"
 
   shared:
     error_messages:
@@ -80,3 +82,9 @@ en:
     p_link: "This link will expire in two hours."
     p_request: If you did not request your password to be reset, please ignore this email and your password will stay as it is.
     reset_password: "Reset password"
+  topics:
+    index:
+      post: "Posted %{time} ago."
+      post: "66 Posts"
+      topic: "Topic"
+      home_page: "Home"

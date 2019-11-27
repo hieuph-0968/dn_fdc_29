@@ -1,5 +1,5 @@
 <% provide :title, t(".home_page") %>
-<%= link_to image_tag("Thumb.jpg",size: "100%*500",alt: "Rails logo",:class => "header-wrapper") %>
+<%= render "static_pages/home" %>
 <div class="page-container">
   <div class="container">
     <div class="row">
@@ -8,11 +8,14 @@
           <section class="span12 articles-list">
           <h2 class= "topic"><%= t(".topic") %></h2>
           <ul class="articles">
+            <% @topics.each do |topic| %>
             <li class="article-entry standard">
-              <h3 class ="h3_title"><%= link_to t(".h3_title") %></h3>
-              <span class="article-meta"><%= link_to t(".time")%><%= link_to t(".servers") %></span>
-              <span class="count"><%= link_to t(".post") %></span>
+              <h3 class ="h3_title"><%= topic.name %></h3>
+              <h6><%= topic.description %></h6>
+              <span id="time"class="article-meta"><%= t ".post",time: time_ago_in_words(topic.created_at) %></span>
+              <span class="count"><%= link_to t(".posts") %></span>
             </li>
+            <% end %>
           </ul>
         </section>
         </div>

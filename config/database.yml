@@ -9,6 +9,8 @@ default: &default
 development:
   <<: *default
   database: Forum_gamer
+  encoding: utf8mb4
+  collation: utf8mb4_bin
 
 test:
   <<: *default

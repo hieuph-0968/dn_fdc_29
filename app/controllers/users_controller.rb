@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
+
   def show
     @user = User.find(params[:id])
   end
@@ -18,7 +20,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = t ".profile"
       redirect_to @user
     else
       render :edit
@@ -41,5 +43,12 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :password,
                                  :password_confirmation)
+  end
+
+   def logged_in_user
+    return if logged_in?
+
+    flash[:danger] = t "users.logged"
+    redirect_to login_path
   end
 end

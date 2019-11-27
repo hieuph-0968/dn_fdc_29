@@ -33,6 +33,7 @@ vi:
       post: "66 bài viết"
       topic: "Chủ Đề"
   users:
+    logged: "Vui lòng đăng nhập trước"
     new:
       title: "Đăng Kí"
       save: "Tạo tài khoản"
@@ -43,6 +44,7 @@ vi:
       save: "Lưu thay đổi"
     index:
       profile: "Thông tin đã cập nhật"
+      all: "Tất cả người dùng"
 
   shared:
     error_messages:
@@ -80,4 +82,10 @@ vi:
     p_link: "Liên kết này sẽ hết hạn sau hai giờ nữa."
     p_request: "Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này và mật khẩu của bạn sẽ được giữ nguyên."
     reset_password: "Đặt lại mật khẩu"
+  topics:
+    index:
+      post: "Đã đăng %{time} trước."
+      posts: "66 bài viết"
+      topic: "Chủ Đề"
+      home_page: "Trang Chủ"
 

@@ -55,6 +55,7 @@ end
 gem "bcrypt", "3.1.12"
 gem "bootstrap-sass", "3.3.7"
 gem "config"
+gem "faker"
 gem "figaro"
 gem "font-awesome-sass", "~> 5.11.2"
 gem "jquery-rails"
