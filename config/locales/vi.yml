@@ -39,9 +39,12 @@ vi:
       save: "Tạo tài khoản"
     create:
       sucess: "Chào mừng đến với diễn đàn game thủ !"
+    update:
+      profile: "Cập nhật hồ sơ của bạn"
     edit:
-      update: "Cập nhật hồ sơ của bạn"
       save: "Lưu thay đổi"
+      edit:  "Chỉnh sửa người dùng"
+      update: "Cập nhật hồ sơ của bạn"
     index:
       profile: "Thông tin đã cập nhật"
       all: "Tất cả người dùng"
@@ -83,9 +86,12 @@ vi:
     p_request: "Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này và mật khẩu của bạn sẽ được giữ nguyên."
     reset_password: "Đặt lại mật khẩu"
   topics:
+    post: "Đã đăng %{time} trước."
     index:
-      post: "Đã đăng %{time} trước."
       posts: "66 bài viết"
       topic: "Chủ Đề"
       home_page: "Trang Chủ"
+    show:
+      count_topic: "Số lượng bài viết: %{count}"
+
 

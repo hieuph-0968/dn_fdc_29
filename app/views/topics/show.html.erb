@@ -1,0 +1,34 @@
+<% provide(:title, @topic.name) %>
+<div class="page-container">
+ <div class="container">
+  <div class="row ">
+   <div class="span8">
+     <a href="/new-post.html">
+       <button class="btn btn btn-success">Start new post</button>
+     </a>
+   </div>
+  </div>
+  <div class="row">
+   <div class="span8 main-listing">
+    <article class="format-standard type-post hentry clearfix">
+      <header class="clearfix">
+        <h3 class="post-title">
+          <%= @topic.name %>
+        </h3>
+        <div class="post-meta clearfix">
+          <span class="date"><%= t "topics.post",time: time_ago_in_words(@topic.created_at) %></span>
+        </div><!-- end of post meta -->
+      </header>
+      <p>
+        <h3><%= t ".count_topic", count: @topic.posts.count %></h3>
+        <ol class="posts">
+          <%= render @posts %>
+        </ol>
+      </p>
+    </article>
+  </div>
+ </div>
+</div>
+
+
+

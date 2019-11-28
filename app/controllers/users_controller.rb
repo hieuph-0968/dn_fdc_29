@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
+  before_action :logged_in_user, except: [:show, :new, :create]
+  before_action :load_user, only: [:show, :edit, :update]
 
   def show
-    @user = User.find(params[:id])
+    @posts = @user.posts.paginate(page: params[:page])
   end
 
   def new
@@ -13,12 +14,9 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def edit
-    @user = User.find(params[:id])
-  end
+  def edit; end
 
   def update
-    @user = User.find(params[:id])
     if @user.update(user_params)
       flash[:success] = t ".profile"
       redirect_to @user
@@ -45,10 +43,14 @@ class UsersController < ApplicationController
                                  :password_confirmation)
   end
 
-   def logged_in_user
+  def logged_in_user
     return if logged_in?
 
     flash[:danger] = t "users.logged"
     redirect_to login_path
+  end
+
+  def load_user
+    @user = User.find(params[:id])
   end
 end

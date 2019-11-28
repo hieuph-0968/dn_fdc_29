@@ -10,9 +10,9 @@
           <ul class="articles">
             <% @topics.each do |topic| %>
             <li class="article-entry standard">
-              <h3 class ="h3_title"><%= topic.name %></h3>
+              <h3 class ="h3_title"><%= link_to topic.name, topic %></h3>
               <h6><%= topic.description %></h6>
-              <span id="time"class="article-meta"><%= t ".post",time: time_ago_in_words(topic.created_at) %></span>
+              <span id="time"class="article-meta"><%= t "topics.post",time: time_ago_in_words(topic.created_at) %></span>
               <span class="count"><%= link_to t(".posts") %></span>
             </li>
             <% end %>

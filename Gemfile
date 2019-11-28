@@ -54,9 +54,11 @@ group :development, :test do
 end
 gem "bcrypt", "3.1.12"
 gem "bootstrap-sass", "3.3.7"
+gem "bootstrap-will_paginate", "1.0.0"
 gem "config"
 gem "faker"
 gem "figaro"
 gem "font-awesome-sass", "~> 5.11.2"
 gem "jquery-rails"
 gem "rails-i18n"
+gem "will_paginate", "3.1.6"
