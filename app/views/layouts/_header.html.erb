@@ -1,0 +1,26 @@
+<div class="header-wrapper">
+  <header>
+    <div class="container">
+      <div class="logo-container">
+        <%= link_to  image_tag("logo.png",class: "logo",alt: t(".alt")) %>
+        <span class="tag-line"><%= link_to t(".title") %></span>
+      </div>
+      <nav class="main-nav">
+        <div class="menu-top-menu-container">
+          <ul id="menu-top-menu" class="clearfix">
+            <li class="current-menu-item"><%= link_to t(".home") %></li>
+            <li><%= link_to t(".activity") %></li>
+            <li><%= link_to t(".sign_in") %></li>
+            <li><%= link_to t(".sign_up") %></li>
+            <li><%= form_tag(@users) do %>
+              <%= text_field_tag :term %>
+              <%= submit_tag t ".search" %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+   </header>
+</div>
+<%= link_to image_tag("Thumb.jpg",alt: t(".alt"),class: "img_home") %>

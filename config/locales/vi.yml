@@ -2,3 +2,23 @@ vi:
   layouts:
     application:
       title: "Diễn đàn về game"
+    header:
+      home: "Trang Chủ"
+      activity: "Hoạt động"
+      sign_in: "Đăng nhập"
+      title: "Diễn đàn về trò chơi"
+      search: "Tìm kiếm"
+      sign_up: "Đăng Kí"
+      alt: "Rails logo"
+    footer:
+      en: "Tiếng Anh"
+      vi: "Tiếng Việt"
+      title: "Bản quyền © 2019.Phan Hoàng Hiếu"
+  static_pages:
+    home:
+      home_page: "Trang Chủ"
+      h3_title: "Tích hợp WordPress với trang web của bạn"
+      time: "25 tháng 2 năm 2013 tại "
+      servers: "Máy chủ & cơ sở dữ liệu"
+      post: "66 bài viết"
+      topic: "Chủ Đề"
