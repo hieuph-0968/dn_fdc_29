@@ -9,13 +9,17 @@
           <h2 class= "topic"><%= t(".topic") %></h2>
           <ul class="articles">
             <% @topics.each do |topic| %>
-            <li class="article-entry standard">
-              <h3 class ="h3_title"><%= link_to topic.name, topic %></h3>
-              <h6><%= topic.description %></h6>
-              <span id="time"class="article-meta"><%= t "topics.post",time: time_ago_in_words(topic.created_at) %></span>
-              <span class="count"><%= link_to t(".posts") %></span>
-            </li>
+              <li class="article-entry standard">
+                <h3 class ="h3_title"><%= link_to topic.name, topic %></h3>
+                <h6><%= topic.description %></h6>
+                <span id="time"class="article-meta"><%= t "topics.post",time: time_ago_in_words(topic.created_at) %></span>
+                <span class="count">
+                  <%= load_count_post(topic.id) %>
+                  <%= t ".posts" %>
+                </span>
+              </li>
             <% end %>
+            <%= will_paginate @topics %>
           </ul>
         </section>
         </div>

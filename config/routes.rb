@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
   scope "(:locale)", locale: /en|vi/ do
     resources :users
-    resources :topics
+    resources :topics do
+      resources :posts
+    end
   end
 end

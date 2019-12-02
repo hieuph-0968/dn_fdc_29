@@ -379,15 +379,32 @@ li.comment {
   }
 }
 ul.articles {
-  list-style: none;
-  margin: 0;
+  list-style-type:none;
   .article-entry {
     position: relative;
-    border-bottom: 1px solid $f2;
+    border-bottom: 1px solid #f2f2f2;
     padding: 0 0 0 24px;
-
+    background: url("/assets/standard.png") no-repeat 0 3px;
+  }
+  .article-entry.standard {
+    background: url("/assets/standard.png") no-repeat 0 3px;
+  }
+  .article-entry.video {
+    background: url("/assets/video.png") no-repeat 0 3px;
+  }
+  .article-entry.image {
+    background: url("/assets/image.png") no-repeat 0 3px;
+  }
+  .article-entry.gallery {
+    background: url("/assets/image.png") no-repeat 0 3px;
+  }
+  li.article-entry {
+    &:last-child {
+      border-bottom: 1px solid #f2f2f2;
+    }
   }
 }
+
 .article-entry {
   >h4 {
     font-size: 13px;
@@ -430,6 +447,7 @@ ul.articles {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  align: center;
   .row {
     display: flex;
     input {
@@ -535,9 +553,33 @@ h1.archive-title {
     margin: 0;
   }
 }
+.inner_new {
+    width:100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $white;
+      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      padding: 70px 80px;
+      input {
+        width: 400px;
+      }
+      button {
+        width: 420px;
+        margin: 20px 0;
+      }
+    }
+}
 .form-login {
   .inner {
-    padding: 80px 0;
+    width:100%;
+    padding: 40px 0;
     display: flex;
     justify-content: center;
     form {
@@ -650,6 +692,7 @@ h1.archive-title {
 
 .h1_title{
   padding-bottom:50px;
+  text-align: center;
 }
 
 .users {
@@ -688,7 +731,7 @@ h1.archive-title {
   .timestamp {
     color: $gray-light;
     display: block;
-    margin-left: 60px;
+    margin-left: 70px;
   }
   .gravatar {
     float: left;
@@ -709,4 +752,16 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+.mainlisting{
+  width:60%;
+}
+.page-sidebar{
+  width:35%;
+  margin-top:80px;
+  margin-left:50px;
+}
+.content{
+  display:flex;
 }

@@ -87,7 +87,7 @@ en:
   topics:
     post: "Posted %{time} ago."
     index:
-      posts: "66 Posts"
+      posts: "Posts"
       topic: "Topic"
       home_page: "Home"
     show:

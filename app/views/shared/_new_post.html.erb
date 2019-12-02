@@ -1,0 +1,10 @@
+<div class="inner_new">
+  <%= form_for @post do |f| %>
+    <h1 class="h1_title">New a post</h1>
+    <%= f.label "ac" %>
+    <%= f.text_area :content, class: "form-control" %>
+    <%= f.label :image %>
+    <%= f.file_field :image, class: "form-control" %>
+    <%= f.submit "New Post", class: "btn btn-primary" %>
+  <% end %>
+</div>

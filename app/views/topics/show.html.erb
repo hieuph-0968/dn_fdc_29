@@ -1,34 +1,53 @@
 <% provide(:title, @topic.name) %>
 <div class="page-container">
- <div class="container">
-  <div class="row ">
-   <div class="span8">
-     <a href="/new-post.html">
-       <button class="btn btn btn-success">Start new post</button>
-     </a>
-   </div>
-  </div>
-  <div class="row">
-   <div class="span8 main-listing">
-    <article class="format-standard type-post hentry clearfix">
-      <header class="clearfix">
-        <h3 class="post-title">
-          <%= @topic.name %>
-        </h3>
-        <div class="post-meta clearfix">
-          <span class="date"><%= t "topics.post",time: time_ago_in_words(@topic.created_at) %></span>
-        </div><!-- end of post meta -->
-      </header>
-      <p>
-        <h3><%= t ".count_topic", count: @topic.posts.count %></h3>
-        <ol class="posts">
-          <%= render @posts %>
-        </ol>
-      </p>
-    </article>
-  </div>
- </div>
-</div>
+  <div class="container">
+    <div class="content">
+      <div class="mainlisting">
+        <article class="format-standard type-post hentry clearfix">
+          <header class="clearfix">
+            <h3 class="title">
+              <%= link_to "New a Post", new_topic_post_path(@topic.id) %>
+            </h3>
+          </header>
+          <p>
+            <h3><%= t ".count_topic", count: @topic.posts.count %></h3>
+            <ol class="posts">
+              <%= render @posts %>
+            </ol>
+            <%= will_paginate @posts %>
+          </p>
+        </article>
+      </div>
+      <aside class="page-sidebar">
+        <section class="widget">
+          <h3 class="title">Suggest Topic</h3>
+          <ul class="articles">
+            <li class="article-entry standard">
+              <h4><a href="articles-list.html">Integrating WordPress with Your Website</a></h4>
+              <span class="article-meta">25 Feb, 2013 in <a href="#" title="View all posts in Server &amp; Database">Server &amp; Database</a></span>
+              <span class="like-count">66</span>
+            </li>
+            <li class="article-entry standard">
+              <h4><a href="articles-list.html">WordPress Site Maintenance</a></h4>
+              <span class="article-meta">24 Feb, 2013 in <a href="#" title="View all posts  in Website Dev">Website Dev</a></span>
+              <span class="like-count">15</span>
+            </li>
+            <li class="article-entry video">
+              <h4><a href="articles-list.html">Meta Tags in WordPress</a></h4>
+              <span class="article-meta">23 Feb, 2013 in <a href="#" title="View all posts in Website Dev">Website Dev</a></span>
+              <span class="like-count">8</span>
+            </li>
+            <li class="article-entry image">
+              <h4><a href="articles-list.html">WordPress in Your Language</a></h4>
+              <span class="article-meta">22 Feb, 2013 in <a href="#" title="View all posts in Advanced Techniques">Advanced Techniques</a></span>
+              <span class="like-count">6</span>
+            </li>
+          </ul>
+        </section>
+      </aside>
 
+    </div>
+  </div>
+</div>
 
 
